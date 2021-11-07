@@ -1,3 +1,4 @@
+--hi im cool
 repeat wait() until game:IsLoaded()
 
 getgenv().Min = 8 -- min players
