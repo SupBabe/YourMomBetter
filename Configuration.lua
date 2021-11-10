@@ -3,16 +3,16 @@ repeat wait() until game:IsLoaded()
 
 getgenv().Min = 8 -- min players
 getgenv().Max = 12 -- max players
-getgenv().MaxRokas = 25 -- Max Roka
-getgenv().MaxArrows = 25 -- Max Arrows
+getgenv().MaxRokas = 25 -- Max Roka make it 50 for x2
+getgenv().MaxArrows = 25 -- Max Arrows make 50 for x2
 getgenv().webhook = "" -- your webhook 
 getgenv().DiscordID = "@everyone" -- your discord ID
 getgenv().FastMode = true; -- fast mode if you set that to false you can set delay to hopper Teleporting In Case You Have Problems with client behavior
 getgenv().HopperDelay = 0.1; -- delay hopper the more the slow search
 getgenv().SkipAssets = true; -- make you able to skip assets 
 getgenv().ResetAfter = 10 -- 10 minutes ( if you use x2 make it 20 )
-getgenv().CollectArrowShiny = 24; -- the amount of arrows before shiny starts make it 50 for x2 gamepass
-getgenv().CollectRokaShiny = 24; -- the amount of rokas before shiny start make it 50 for x2 gamepass
+getgenv().CollectArrowShiny = 24; -- the amount of arrows before shiny starts make it 49 for x2 gamepass
+getgenv().CollectRokaShiny = 24; -- the amount of rokas before shiny start make it 49 for x2 gamepass
 getgenv().Farming = {
     ["Rokakaka"] = true,
     ["Mysterious Arrow"] = true,
