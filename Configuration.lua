@@ -3,6 +3,7 @@ repeat wait() until game:IsLoaded()
 
 getgenv().Min = 8 -- min players
 getgenv().Max = 12 -- max players
+getgenv().ItemPickup = 0.4;
 getgenv().MaxRokas = 25 -- Max Roka make it 50 for x2
 getgenv().MaxArrows = 25 -- Max Arrows make 50 for x2
 getgenv().webhook = "" -- your webhook 
