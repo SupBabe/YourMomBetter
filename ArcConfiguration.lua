@@ -4,6 +4,7 @@ repeat wait() until game:IsLoaded()
 
 getgenv().Min = 12 -- min players
 getgenv().Max = 14 -- max players
+getgenv().ItemPickUp = 0.4;
 getgenv().Farming = {
     ["Rokakaka"] = true,
     ["Gold Coin"] = true,
