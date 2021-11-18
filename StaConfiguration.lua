@@ -1,3 +1,4 @@
+-- Warning This Can Roka Your Shiny Please Note This Made For Farming Stands That Means it can Roka Your SHINY!
 repeat wait() until game:IsLoaded()
 
 getgenv().Min = 8 -- min players
