@@ -5,6 +5,7 @@ repeat wait() until game:IsLoaded()
 getgenv().Min = 12 -- min players
 getgenv().Max = 14 -- max players
 getgenv().ItemPickUp = 0.4;
+getgenv().alternativeconnection = true; -- set to false if 3ds fixed the issue ty
 getgenv().Farming = {
     ["Rokakaka"] = true,
     ["Gold Coin"] = true,
