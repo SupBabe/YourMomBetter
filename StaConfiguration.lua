@@ -11,7 +11,7 @@ getgenv().FastMode = true; -- fast mode if you set that to false you can set del
 getgenv().HopperDelay = 0.1; -- delay hopper the more the slow search
 getgenv().SkipAssets = true; -- make you able to skip assets 
 getgenv().ResetAfter = 10 -- 10 minutes ( if you use x2 make it 20 )
-getgenv().CollectArrowShiny = 24; -- the amount of arrows before shiny starts make it 49 for x2 gamepass
+getgenv().CollectArrowStand = 24; -- the amount of arrows before shiny starts make it 49 for x2 gamepass
 getgenv().CollectRokaShiny = 24; -- the amount of rokas before shiny start make it 49 for x2 gamepass
 getgenv().alternativeconnection = true; -- set to false if 3ds fixed the issue ty
 getgenv().Farming = {
@@ -19,14 +19,6 @@ getgenv().Farming = {
     ["Mysterious Arrow"] = true,
     ["Lucky Arrow"] = true
 }
-
-
-
-
-
-
-
-
 
 
 getgenv().Stands = {
