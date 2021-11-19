@@ -45,4 +45,5 @@ getgenv().Stands = {
 ["Ms. Vice President"] = true; 
 ["Ice Album"] = true;
 ["Zipper Fingers"] = true;
+["Scarlet King"] = true;
 }
