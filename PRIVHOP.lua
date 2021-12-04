@@ -1,5 +1,5 @@
 repeat wait() until game:IsLoaded()
-_G.Min = 13 -- min players
+_G.Min = 8 -- min players
 _G.Max = 14  -- max players
 _G.ItemFarm = "Lucky Arrow" -- Notify Which Item for webhook 
 getgenv().webhook = "" -- leave both empty if you don't want webhook ( otherwise it's required for both if you want webhook )
