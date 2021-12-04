@@ -1,3 +1,4 @@
+repeat wait() until game:IsLoaded()
 _G.Min = 13 -- min players
 _G.Max = 14  -- max players
 _G.ItemFarm = "Lucky Arrow" -- Notify Which Item for webhook 
