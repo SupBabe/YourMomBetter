@@ -19,7 +19,8 @@ getgenv().Farming = {
     ["Steel Ball"] = true,
     ["Rib Cage of The Saint's Corpse"] = true,
     ["Pure Rokakaka"] = true,
-    ["Stone Mask"] = true
+    ["Stone Mask"] = true,
+    ["Christmas Present"] = true;
 }
 
 getgenv().ItemsToSell = {
