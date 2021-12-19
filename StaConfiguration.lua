@@ -18,7 +18,8 @@ getgenv().alternativeconnection = true; -- set to false if 3ds fixed the issue t
 getgenv().Farming = {
     ["Rokakaka"] = true,
     ["Mysterious Arrow"] = true,
-    ["Lucky Arrow"] = true
+    ["Lucky Arrow"] = true,
+    ["Christmas Present"] = true;
 }
 
 
