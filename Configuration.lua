@@ -75,6 +75,7 @@ getgenv().Shinies = {
 ["Creeper Queen"] = false;
 ["Megumin"] = false;
 ["Sumo World"] = false;
+["FrostBite"] = false;
 }
 
 
