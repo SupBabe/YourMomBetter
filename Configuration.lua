@@ -29,7 +29,7 @@ getgenv().Shinies = {
 ["Glock-18 | Fade"] = false; 
 ["Scarlet Queen"] = true;
 ["Shadow The Universe"] = true;
-["Pink Fingers"] = false;
+["Pinky Fingers"] = false;
 ["The Other Hand"] = true;
 ["OVA Grey Rapier"] = true;
 ["Magellan"] = true;
@@ -68,7 +68,7 @@ getgenv().Shinies = {
 ["Ghost World"] = true;
 ["Deimos Queen"] = true;
 ["OVA The Universe"] = true;
-["Tentacle Green Alternate Universe"] = true;
+["Tentacle Black"] = true;
 ["Jack-O-Platinum"] = true;
 ["Cornsnake"] = true;
 ["Nerf Jolt"] = false;
@@ -76,6 +76,9 @@ getgenv().Shinies = {
 ["Megumin"] = false;
 ["Sumo World"] = false;
 ["FrostBite"] = false;
+["Holly's Sickness"] = false;
+["Toy Zipper Fingers"] = false;
+["Old President"] = false;
 }
 
 
