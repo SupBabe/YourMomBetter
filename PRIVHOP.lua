@@ -1,4 +1,6 @@
 repeat wait() until game:IsLoaded()
+local SG = game:GetService("StarterGui");
+SG:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack,false)
 _G.Min = 8 -- min players
 _G.Max = 14  -- max players
 _G.ItemFarm = "Lucky Arrow" -- Notify Which Item for webhook 
