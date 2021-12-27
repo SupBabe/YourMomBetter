@@ -10,6 +10,18 @@ end)
 
 local getreg = b_getreg
 
+local syn_request = syn.request;
+local original_syn_request = clonefunction(syn.request);
+
+local old_pcall;
+old_pcall = replaceclosure(pcall, newcclosure(function(func, ...)
+   return old_pcall(func == syn_request and original_syn_request or func, ...);
+end));
+
+local old_ypcall;
+old_ypcall = replaceclosure(xpcall, newcclosure(function(func, ...)
+   return old_ypcall(func == syn_request and original_syn_request or func, ...);
+end));
 --[[
     SimpleSpy v2.2 SOURCE
 
