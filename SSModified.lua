@@ -1,3 +1,15 @@
+local backupReg = {}
+for i,v in next, getreg() do 
+    backupReg[i] = v 
+end
+
+local b_getreg
+b_getreg = hookfunction(getreg, function()
+    return backupReg
+end)
+
+local getreg = b_getreg
+
 --[[
     SimpleSpy v2.2 SOURCE
 
