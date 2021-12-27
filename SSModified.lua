@@ -8,10 +8,7 @@
         Frosty - GUI to Lua
 ]]
 
--- shuts down the previous instance of SimpleSpy
-if _G.SimpleSpyExecuted and type(_G.SimpleSpyShutdown) == "function" then
-    _G.SimpleSpyShutdown()
-end
+
 
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
@@ -51,7 +48,7 @@ local TextLabel = Instance.new("TextLabel")
 
 --Properties:
 
-SimpleSpy2.Name = "Roblox"
+SimpleSpy2.Name = "RobloxGui"
 SimpleSpy2.ResetOnSpawn = false
 
 Background.Name = "Background"
@@ -340,7 +337,7 @@ local remoteFunction = Instance.new("RemoteFunction")
 local originalEvent = remoteEvent.FireServer
 local originalFunction = remoteFunction.InvokeServer
 --- the maximum amount of remotes allowed in logs
-_G.SIMPLESPYCONFIG_MaxRemotes = 500
+_G.Max = 500
 --- how many spaces to indent
 local indent = 4
 --- used for task scheduler
@@ -513,7 +510,7 @@ end
 
 --- Prevents remote spam from causing lag (clears logs after `_G.SIMPLESPYCONFIG_MaxRemotes` or 500 remotes)
 function clean()
-    local max = _G.SIMPLESPYCONFIG_MaxRemotes
+    local max = _G.Max
     if not typeof(max) == "number" and math.floor(max) ~= max then
         max = 500
     end
@@ -839,7 +836,7 @@ function mouseEntered()
     customCursor.Parent = SimpleSpy2
     UserInputService.OverrideMouseIconBehavior = Enum.OverrideMouseIconBehavior.ForceHide
     RunService:BindToRenderStep("SIMPLESPY_CURSOR", 1, function()
-        if mouseInGui and _G.SimpleSpyExecuted then
+        if mouseInGui  then
             local mouseLocation = UserInputService:GetMouseLocation() - Vector2.new(0, 36)
             customCursor.Position = UDim2.fromOffset(mouseLocation.X - customCursor.AbsoluteSize.X / 2, mouseLocation.Y - customCursor.AbsoluteSize.Y / 2)
             local inRange, type = isInResizeRange(mouseLocation)
@@ -1276,7 +1273,7 @@ function t2s(t, l, p, n, vtv, i, pt, path, tables, tI)
     l = l + indent -- set indentation level
     for k, v in pairs(t) do -- iterates over table
         size = size + 1 -- changes size for max limit
-        if size > (_G.SimpleSpyMaxTableSize or 1000) then
+        if size > ( 1000) then
             s = s .. "\n" .. string.rep(" ", l) .. "-- MAXIMUM TABLE SIZE REACHED, CHANGE '_G.SimpleSpyMaxTableSize' TO ADJUST MAXIMUM SIZE "
             break
         end
@@ -1873,11 +1870,10 @@ function shutdown()
         gm.__namecall = original
         setreadonly(gm, true)
     end
-    _G.SimpleSpyExecuted = false
 end
 
 -- main
-if not _G.SimpleSpyExecuted then
+    if true then 
     local succeeded, err = pcall(function()
         if not RunService:IsClient() then
             error("SimpleSpy cannot run on the server!")
@@ -1886,7 +1882,6 @@ if not _G.SimpleSpyExecuted then
             shutdown()
             error("This environment does not support method hooks!\n(Your exploit is not capable of running SimpleSpy)")
         end
-        _G.SimpleSpyShutdown = shutdown
         ContentProvider:PreloadAsync({"rbxassetid://6065821980", "rbxassetid://6065774948", "rbxassetid://6065821086", "rbxassetid://6065821596", ImageLabel, ImageLabel_2, ImageLabel_3})
         -- if gethui then funcEnabled = false end
         onToggleButtonClick()
@@ -1894,7 +1889,7 @@ if not _G.SimpleSpyExecuted then
         FunctionTemplate.Parent = nil
         codebox = Highlight.new(CodeBox)
         codebox:setRaw("")
-        getgenv().SimpleSpy = SimpleSpy
+        getgenv().NOG = SimpleSpy
         getgenv().getNil = function(name,class) for _,v in pairs(getnilinstances())do if v.ClassName==class and v.Name==name then return v;end end end
         TextLabel:GetPropertyChangedSignal("Text"):Connect(scaleToolTip)
         -- TopBar.InputBegan:Connect(onBarInput)
@@ -1925,7 +1920,6 @@ if not _G.SimpleSpyExecuted then
         table.insert(connections, Mouse.Move:Connect(mouseMoved))
     end)
     if succeeded then
-        _G.SimpleSpyExecuted = true
     else
         warn("A fatal error has occured, SimpleSpy was unable to launch properly.\nPlease DM this error message to @exx#9394:\n\n" .. tostring(err))
         SimpleSpy2:Destroy()
